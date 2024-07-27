@@ -32,7 +32,7 @@ export class AppService {
     exchangeArr.push(binanceObj);
 
     const res = exchangeArr.reduce(function (prev, current) {
-      return (prev && prev.outputAmount < current.outputAmount) ? prev : current
+      return (prev && prev.outputAmount > current.outputAmount) ? prev : current
     })
 
     return res;
